@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="verde_hogwarts">#1F3D2B</color>
+    <color name="dourado_hogwarts">#C8A94B</color>
+    <color name="fundo_claro">#F7F1E6</color>
+    <color name="texto_principal">#221A14</color>
 </resources>

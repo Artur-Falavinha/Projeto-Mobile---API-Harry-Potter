@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Trabalho 1 - API Harry Potter</string>
+    <string name="titulo_painel">Harry Potter API</string>
+    <string name="opcao_personagem">Listar personagem por ID</string>
+    <string name="opcao_professor">Listar professor da escola</string>
+    <string name="opcao_estudantes">Listar estudantes de uma casa</string>
+    <string name="opcao_feiticos">Ver feitiços</string>
+    <string name="opcao_sair">Sair</string>
+    <string name="rotulo_id_personagem">ID do personagem</string>
+    <string name="rotulo_nome_professor">Nome do professor</string>
+    <string name="acao_buscar">Buscar</string>
+    <string name="acao_listar">Listar</string>
+    <string name="mensagem_campo_obrigatorio">Preencha o campo obrigatório.</string>
+    <string name="mensagem_casa_obrigatoria">Selecione uma casa.</string>
+    <string name="mensagem_erro_consulta">Não foi possível consultar a HP-API.</string>
+    <string name="mensagem_personagem_nao_encontrado">Personagem não encontrado.</string>
+    <string name="mensagem_professor_nao_encontrado">Professor não encontrado.</string>
+    <string name="mensagem_estudantes_nao_encontrados">Nenhum estudante encontrado para esta casa.</string>
+    <string name="mensagem_feiticos_nao_encontrados">Nenhum feitiço encontrado.</string>
+    <string name="texto_sem_informacao">Sem informação</string>
+    <string name="texto_imagem_indisponivel">Imagem indisponível</string>
+    <string name="rotulo_nome">Nome</string>
+    <string name="rotulo_especie">Espécie</string>
+    <string name="rotulo_casa">Casa</string>
+    <string name="rotulo_nomes_alternativos">Nomes alternativos</string>
+    <string name="titulo_estudantes">Estudantes por casa</string>
+    <string name="titulo_feiticos">Feitiços</string>
+    <string name="titulo_detalhe_feitico">Detalhe do feitiço</string>
+    <string name="rotulo_descricao">Descrição</string>
 </resources>

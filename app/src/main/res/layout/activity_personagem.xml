@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo_claro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <EditText
+            android:id="@+id/campoIdPersonagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/rotulo_id_personagem"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/botaoBuscarPersonagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/acao_buscar" />
+
+        <ProgressBar
+            android:id="@+id/progressoPersonagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imagemPersonagem"
+            android:layout_width="160dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:contentDescription="@string/texto_imagem_indisponivel"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/textoNomePersonagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/texto_principal"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textoEspeciePersonagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/texto_principal"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textoCasaPersonagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/texto_principal"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</ScrollView>

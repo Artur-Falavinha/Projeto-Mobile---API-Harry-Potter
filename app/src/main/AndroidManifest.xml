@@ -14,7 +14,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Trabalho1APIHarryPotter">
         <activity
-            android:name=".MainActivity"
+            android:name=".controller.DetalheFeiticoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".controller.FeiticosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".controller.EstudantesCasaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".controller.ProfessorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".controller.PersonagemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".controller.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

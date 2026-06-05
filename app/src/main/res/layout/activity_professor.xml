@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo_claro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <EditText
+            android:id="@+id/campoNomeProfessor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/rotulo_nome_professor"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/botaoBuscarProfessor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/acao_buscar" />
+
+        <ProgressBar
+            android:id="@+id/progressoProfessor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textoNomeProfessor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/texto_principal"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textoNomesAlternativosProfessor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/texto_principal"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textoEspecieProfessor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/texto_principal"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textoCasaProfessor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/texto_principal"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</ScrollView>

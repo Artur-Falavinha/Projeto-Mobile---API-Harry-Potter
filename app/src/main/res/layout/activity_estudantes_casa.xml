@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo_claro"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_estudantes"
+        android:textColor="@color/verde_hogwarts"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/grupoCasas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioGryffindor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gryffindor" />
+
+        <RadioButton
+            android:id="@+id/radioSlytherin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slytherin" />
+
+        <RadioButton
+            android:id="@+id/radioRavenclaw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ravenclaw" />
+
+        <RadioButton
+            android:id="@+id/radioHufflepuff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hufflepuff" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/botaoListarEstudantes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/acao_listar" />
+
+    <ProgressBar
+        android:id="@+id/progressoEstudantes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaEstudantes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

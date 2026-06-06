@@ -14,6 +14,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.trabalho1_apiharrypotter.R
 import com.example.trabalho1_apiharrypotter.api.HarryPotterApi
 import com.example.trabalho1_apiharrypotter.model.Personagem
+import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -35,6 +36,7 @@ class PersonagemActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_personagem)
         vincularComponentes()
+        configurarVoltar()
         configurarBusca()
     }
 
@@ -46,6 +48,12 @@ class PersonagemActivity : AppCompatActivity() {
         textoNomePersonagem = findViewById(R.id.textoNomePersonagem)
         textoEspeciePersonagem = findViewById(R.id.textoEspeciePersonagem)
         textoCasaPersonagem = findViewById(R.id.textoCasaPersonagem)
+    }
+
+    private fun configurarVoltar() {
+        findViewById<Button>(R.id.botaoVoltar).setOnClickListener {
+            finish()
+        }
     }
 
     private fun configurarBusca() {
@@ -67,6 +75,7 @@ class PersonagemActivity : AppCompatActivity() {
     private fun buscarPersonagem(idPersonagem: String) {
         lifecycleScope.launch(Dispatchers.Main) {
             controlarCarregamento(true)
+            esconderImagem()
             try {
                 val personagens = withContext(Dispatchers.IO) {
                     harryPotterApi.buscarPersonagemPorId(idPersonagem)
@@ -108,23 +117,44 @@ class PersonagemActivity : AppCompatActivity() {
     }
 
     private fun carregarImagem(urlImagem: String?) {
-        imagemPersonagem.setImageDrawable(null)
+        esconderImagem()
         if (urlImagem.isNullOrBlank()) {
             imagemPersonagem.contentDescription = getString(R.string.texto_imagem_indisponivel)
             return
         }
         Picasso.get()
             .load(urlImagem)
-            .fit()
+            .resize(converterDpParaPixel(160), converterDpParaPixel(220))
             .centerCrop()
-            .into(imagemPersonagem)
+            .into(
+                imagemPersonagem,
+                object : Callback {
+                    override fun onSuccess() {
+                        imagemPersonagem.visibility = View.VISIBLE
+                    }
+
+                    override fun onError(erro: Exception?) {
+                        Log.e(TAG, "Erro ao carregar imagem do personagem", erro)
+                        esconderImagem()
+                    }
+                }
+            )
     }
 
     private fun limparResultado() {
         textoNomePersonagem.text = ""
         textoEspeciePersonagem.text = ""
         textoCasaPersonagem.text = ""
+        esconderImagem()
+    }
+
+    private fun esconderImagem() {
         imagemPersonagem.setImageDrawable(null)
+        imagemPersonagem.visibility = View.GONE
+    }
+
+    private fun converterDpParaPixel(valorDp: Int): Int {
+        return (valorDp * resources.displayMetrics.density).toInt()
     }
 
     private fun controlarCarregamento(carregando: Boolean) {

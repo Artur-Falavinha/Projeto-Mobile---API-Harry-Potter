@@ -33,6 +33,7 @@ class ProfessorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_professor)
         vincularComponentes()
+        configurarVoltar()
         configurarBusca()
     }
 
@@ -44,6 +45,12 @@ class ProfessorActivity : AppCompatActivity() {
         textoNomesAlternativosProfessor = findViewById(R.id.textoNomesAlternativosProfessor)
         textoEspecieProfessor = findViewById(R.id.textoEspecieProfessor)
         textoCasaProfessor = findViewById(R.id.textoCasaProfessor)
+    }
+
+    private fun configurarVoltar() {
+        findViewById<Button>(R.id.botaoVoltar).setOnClickListener {
+            finish()
+        }
     }
 
     private fun configurarBusca() {

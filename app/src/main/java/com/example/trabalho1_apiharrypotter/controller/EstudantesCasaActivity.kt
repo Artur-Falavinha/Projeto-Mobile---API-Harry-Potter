@@ -33,6 +33,7 @@ class EstudantesCasaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_estudantes_casa)
         vincularComponentes()
+        configurarVoltar()
         configurarLista()
         configurarBusca()
     }
@@ -42,6 +43,12 @@ class EstudantesCasaActivity : AppCompatActivity() {
         botaoListarEstudantes = findViewById(R.id.botaoListarEstudantes)
         progressoEstudantes = findViewById(R.id.progressoEstudantes)
         listaEstudantes = findViewById(R.id.listaEstudantes)
+    }
+
+    private fun configurarVoltar() {
+        findViewById<Button>(R.id.botaoVoltar).setOnClickListener {
+            finish()
+        }
     }
 
     private fun configurarLista() {

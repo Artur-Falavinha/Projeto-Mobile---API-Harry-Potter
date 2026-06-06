@@ -10,6 +10,13 @@
         android:orientation="vertical"
         android:padding="24dp">
 
+        <Button
+            android:id="@+id/botaoVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/acao_voltar" />
+
         <EditText
             android:id="@+id/campoIdPersonagem"
             android:layout_width="match_parent"
@@ -41,7 +48,8 @@
             android:layout_marginTop="20dp"
             android:background="@color/white"
             android:contentDescription="@string/texto_imagem_indisponivel"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/textoNomePersonagem"

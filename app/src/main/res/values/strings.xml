@@ -10,6 +10,7 @@
     <string name="rotulo_nome_professor">Nome do professor</string>
     <string name="acao_buscar">Buscar</string>
     <string name="acao_listar">Listar</string>
+    <string name="acao_voltar">Voltar</string>
     <string name="mensagem_campo_obrigatorio">Preencha o campo obrigatório.</string>
     <string name="mensagem_casa_obrigatoria">Selecione uma casa.</string>
     <string name="mensagem_erro_consulta">Não foi possível consultar a HP-API.</string>

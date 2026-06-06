@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/fundo_item"
     android:orientation="vertical"
     android:padding="14dp">
 
@@ -9,7 +11,7 @@
         android:id="@+id/textoNomeFeitico"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/verde_hogwarts"
+        android:textColor="@color/dourado_hogwarts"
         android:textSize="18sp"
         android:textStyle="bold" />
 

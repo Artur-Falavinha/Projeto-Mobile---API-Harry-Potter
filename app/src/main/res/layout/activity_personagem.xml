@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fundo_claro">
+    android:background="@drawable/fundo_hp_api">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,13 +11,13 @@
         android:padding="24dp">
 
         <Button
+            style="@style/BotaoVoltar"
             android:id="@+id/botaoVoltar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="@string/acao_voltar" />
 
         <EditText
+            style="@style/CampoTexto"
             android:id="@+id/campoIdPersonagem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,6 +26,7 @@
             android:minHeight="48dp" />
 
         <Button
+            style="@style/BotaoPrincipal"
             android:id="@+id/botaoBuscarPersonagem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -46,7 +47,7 @@
             android:layout_height="220dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:background="@color/white"
+            android:background="@color/pergaminho"
             android:contentDescription="@string/texto_imagem_indisponivel"
             android:scaleType="centerCrop"
             android:visibility="gone" />

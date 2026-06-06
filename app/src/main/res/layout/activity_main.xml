@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fundo_claro"
+    android:background="@drawable/fundo_hp_api"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="24dp"
@@ -22,6 +22,7 @@
         android:textStyle="bold" />
 
     <Button
+        style="@style/BotaoPrincipal"
         android:id="@+id/botaoPersonagem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,6 +30,7 @@
         android:text="@string/opcao_personagem" />
 
     <Button
+        style="@style/BotaoPrincipal"
         android:id="@+id/botaoProfessor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,6 +38,7 @@
         android:text="@string/opcao_professor" />
 
     <Button
+        style="@style/BotaoPrincipal"
         android:id="@+id/botaoEstudantes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,6 +46,7 @@
         android:text="@string/opcao_estudantes" />
 
     <Button
+        style="@style/BotaoPrincipal"
         android:id="@+id/botaoFeiticos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,6 +54,7 @@
         android:text="@string/opcao_feiticos" />
 
     <Button
+        style="@style/BotaoPrincipal"
         android:id="@+id/botaoSair"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

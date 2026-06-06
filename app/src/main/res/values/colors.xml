@@ -2,8 +2,21 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="verde_hogwarts">#1F3D2B</color>
-    <color name="dourado_hogwarts">#C8A94B</color>
-    <color name="fundo_claro">#F7F1E6</color>
-    <color name="texto_principal">#221A14</color>
+    <color name="fundo_escuro_inicio">#0A0E1A</color>
+    <color name="fundo_escuro_meio">#1A1A2E</color>
+    <color name="fundo_escuro_fim">#16213E</color>
+    <color name="pergaminho">#F5E9D4</color>
+    <color name="pergaminho_escuro">#E8D9B5</color>
+    <color name="magia_roxo">#8A2BE2</color>
+    <color name="dourado_hogwarts">#D3A625</color>
+    <color name="dourado_brilho">#FFD700</color>
+    <color name="vermelho_grifinoria">#740001</color>
+    <color name="verde_sonserina">#1A472A</color>
+    <color name="azul_corvinal">#0E1A40</color>
+    <color name="bronze_corvinal">#946B2D</color>
+    <color name="amarelo_lufa_lufa">#FFDB00</color>
+    <color name="verde_hogwarts">#D3A625</color>
+    <color name="fundo_claro">#0A0E1A</color>
+    <color name="texto_principal">#F5E9D4</color>
+    <color name="texto_secundario">#E8D9B5</color>
 </resources>

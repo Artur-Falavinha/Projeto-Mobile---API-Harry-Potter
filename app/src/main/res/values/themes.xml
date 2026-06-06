@@ -1,9 +1,38 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Trabalho1APIHarryPotter" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/magia_roxo</item>
+        <item name="colorSecondary">@color/dourado_hogwarts</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/fundo_escuro_inicio</item>
+        <item name="android:statusBarColor">@color/fundo_escuro_inicio</item>
     </style>
 
     <style name="Theme.Trabalho1APIHarryPotter" parent="Base.Theme.Trabalho1APIHarryPotter" />
+
+    <style name="BotaoPrincipal" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/magia_roxo</item>
+        <item name="android:textColor">@color/pergaminho</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="BotaoVoltar" parent="Widget.Material3.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:backgroundTint">@color/azul_corvinal</item>
+        <item name="android:textColor">@color/pergaminho</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CampoTexto">
+        <item name="android:textColor">@color/pergaminho</item>
+        <item name="android:textColorHint">@color/pergaminho_escuro</item>
+        <item name="android:backgroundTint">@color/dourado_hogwarts</item>
+    </style>
 </resources>

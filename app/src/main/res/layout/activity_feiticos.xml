@@ -2,14 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fundo_claro"
+    android:background="@drawable/fundo_hp_api"
     android:orientation="vertical"
     android:padding="16dp">
 
     <Button
+        style="@style/BotaoVoltar"
         android:id="@+id/botaoVoltar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:text="@string/acao_voltar" />
 

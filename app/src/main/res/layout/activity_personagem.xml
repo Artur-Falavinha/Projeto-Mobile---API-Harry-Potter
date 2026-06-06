@@ -47,8 +47,9 @@
             android:layout_height="220dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:background="@color/pergaminho"
+            android:background="@drawable/fundo_imagem_indisponivel"
             android:contentDescription="@string/texto_imagem_indisponivel"
+            android:padding="18dp"
             android:scaleType="centerCrop"
             android:visibility="gone" />
 

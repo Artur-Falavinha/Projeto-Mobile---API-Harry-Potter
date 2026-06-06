@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.trabalho1_apiharrypotter.R
 import com.example.trabalho1_apiharrypotter.model.Personagem
+import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 
 class EstudantesAdapter(
@@ -45,14 +46,34 @@ class EstudantesAdapter(
                 ?.takeIf { it.isNotBlank() }
                 ?: contexto.getString(R.string.texto_sem_informacao)
 
-            imagemEstudante.setImageDrawable(null)
-            if (!estudante.imagem.isNullOrBlank()) {
-                Picasso.get()
-                    .load(estudante.imagem)
-                    .fit()
-                    .centerCrop()
-                    .into(imagemEstudante)
+            mostrarImagemIndisponivel()
+            if (estudante.imagem.isNullOrBlank()) {
+                return
             }
+            imagemEstudante.scaleType = ImageView.ScaleType.CENTER_CROP
+            Picasso.get()
+                .load(estudante.imagem)
+                .fit()
+                .centerCrop()
+                .into(
+                    imagemEstudante,
+                    object : Callback {
+                        override fun onSuccess() {
+                            imagemEstudante.scaleType = ImageView.ScaleType.CENTER_CROP
+                        }
+
+                        override fun onError(erro: Exception?) {
+                            mostrarImagemIndisponivel()
+                        }
+                    }
+                )
+        }
+
+        private fun mostrarImagemIndisponivel() {
+            imagemEstudante.scaleType = ImageView.ScaleType.CENTER_INSIDE
+            imagemEstudante.setImageResource(R.drawable.ic_personagem_indisponivel)
+            imagemEstudante.contentDescription =
+                itemView.context.getString(R.string.texto_imagem_indisponivel)
         }
     }
 }

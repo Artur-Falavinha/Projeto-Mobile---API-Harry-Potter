@@ -119,9 +119,10 @@ class PersonagemActivity : AppCompatActivity() {
     private fun carregarImagem(urlImagem: String?) {
         esconderImagem()
         if (urlImagem.isNullOrBlank()) {
-            imagemPersonagem.contentDescription = getString(R.string.texto_imagem_indisponivel)
+            mostrarImagemIndisponivel()
             return
         }
+        imagemPersonagem.scaleType = ImageView.ScaleType.CENTER_CROP
         Picasso.get()
             .load(urlImagem)
             .resize(converterDpParaPixel(160), converterDpParaPixel(220))
@@ -135,7 +136,7 @@ class PersonagemActivity : AppCompatActivity() {
 
                     override fun onError(erro: Exception?) {
                         Log.e(TAG, "Erro ao carregar imagem do personagem", erro)
-                        esconderImagem()
+                        mostrarImagemIndisponivel()
                     }
                 }
             )
@@ -151,6 +152,13 @@ class PersonagemActivity : AppCompatActivity() {
     private fun esconderImagem() {
         imagemPersonagem.setImageDrawable(null)
         imagemPersonagem.visibility = View.GONE
+    }
+
+    private fun mostrarImagemIndisponivel() {
+        imagemPersonagem.scaleType = ImageView.ScaleType.CENTER_INSIDE
+        imagemPersonagem.setImageResource(R.drawable.ic_personagem_indisponivel)
+        imagemPersonagem.contentDescription = getString(R.string.texto_imagem_indisponivel)
+        imagemPersonagem.visibility = View.VISIBLE
     }
 
     private fun converterDpParaPixel(valorDp: Int): Int {

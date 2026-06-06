@@ -4,88 +4,95 @@
     android:layout_height="match_parent"
     android:background="@drawable/fundo_hp_api"
     android:fitsSystemWindows="true"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="vertical">
 
-    <Button
-        style="@style/BotaoVoltar"
-        android:id="@+id/botaoVoltar"
-        android:layout_marginBottom="12dp"
-        android:text="@string/acao_voltar" />
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/titulo_estudantes"
-        android:textColor="@color/verde_hogwarts"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <RadioGroup
-        android:id="@+id/grupoCasas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:orientation="vertical">
+        <Button
+            style="@style/BotaoVoltar"
+            android:id="@+id/botaoVoltar"
+            android:layout_marginBottom="12dp"
+            android:text="@string/acao_voltar" />
 
-        <RadioButton
-            android:id="@+id/radioGryffindor"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_estudantes"
+            android:textColor="@color/verde_hogwarts"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/grupoCasas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioGryffindor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/dourado_hogwarts"
+                android:textColor="@color/pergaminho"
+                android:text="Gryffindor" />
+
+            <RadioButton
+                android:id="@+id/radioSlytherin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/verde_sonserina"
+                android:textColor="@color/pergaminho"
+                android:text="Slytherin" />
+
+            <RadioButton
+                android:id="@+id/radioRavenclaw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/bronze_corvinal"
+                android:textColor="@color/pergaminho"
+                android:text="Ravenclaw" />
+
+            <RadioButton
+                android:id="@+id/radioHufflepuff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/amarelo_lufa_lufa"
+                android:textColor="@color/pergaminho"
+                android:text="Hufflepuff" />
+        </RadioGroup>
+
+        <Button
+            style="@style/BotaoPrincipal"
+            android:id="@+id/botaoListarEstudantes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/acao_listar" />
+
+        <ProgressBar
+            android:id="@+id/progressoEstudantes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/dourado_hogwarts"
-            android:textColor="@color/pergaminho"
-            android:text="Gryffindor" />
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:visibility="gone" />
 
-        <RadioButton
-            android:id="@+id/radioSlytherin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/verde_sonserina"
-            android:textColor="@color/pergaminho"
-            android:text="Slytherin" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaEstudantes"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:fadeScrollbars="false"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical" />
 
-        <RadioButton
-            android:id="@+id/radioRavenclaw"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/bronze_corvinal"
-            android:textColor="@color/pergaminho"
-            android:text="Ravenclaw" />
-
-        <RadioButton
-            android:id="@+id/radioHufflepuff"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/amarelo_lufa_lufa"
-            android:textColor="@color/pergaminho"
-            android:text="Hufflepuff" />
-    </RadioGroup>
-
-    <Button
-        style="@style/BotaoPrincipal"
-        android:id="@+id/botaoListarEstudantes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/acao_listar" />
-
-    <ProgressBar
-        android:id="@+id/progressoEstudantes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="12dp"
-        android:visibility="gone" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listaEstudantes"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="12dp"
-        android:layout_weight="1"
-        android:fadeScrollbars="false"
-        android:overScrollMode="always"
-        android:scrollbarStyle="insideInset"
-        android:scrollbars="vertical" />
+    </LinearLayout>
 
 </LinearLayout>

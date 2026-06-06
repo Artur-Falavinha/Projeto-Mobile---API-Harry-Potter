@@ -4,40 +4,47 @@
     android:layout_height="match_parent"
     android:background="@drawable/fundo_hp_api"
     android:fitsSystemWindows="true"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="vertical">
 
-    <Button
-        style="@style/BotaoVoltar"
-        android:id="@+id/botaoVoltar"
-        android:layout_marginBottom="12dp"
-        android:text="@string/acao_voltar" />
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/titulo_feiticos"
-        android:textColor="@color/verde_hogwarts"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <ProgressBar
-        android:id="@+id/progressoFeiticos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="12dp"
-        android:visibility="gone" />
+        <Button
+            style="@style/BotaoVoltar"
+            android:id="@+id/botaoVoltar"
+            android:layout_marginBottom="12dp"
+            android:text="@string/acao_voltar" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listaFeiticos"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="12dp"
-        android:layout_weight="1"
-        android:fadeScrollbars="false"
-        android:overScrollMode="always"
-        android:scrollbarStyle="insideInset"
-        android:scrollbars="vertical" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_feiticos"
+            android:textColor="@color/verde_hogwarts"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressoFeiticos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaFeiticos"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:fadeScrollbars="false"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
 
 </LinearLayout>

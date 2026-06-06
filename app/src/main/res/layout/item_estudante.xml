@@ -13,7 +13,6 @@
         android:layout_height="64dp"
         android:background="@drawable/fundo_imagem_indisponivel"
         android:contentDescription="@string/texto_imagem_indisponivel"
-        android:padding="8dp"
         android:scaleType="centerCrop" />
 
     <LinearLayout

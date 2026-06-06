@@ -50,6 +50,7 @@ class EstudantesAdapter(
             if (estudante.imagem.isNullOrBlank()) {
                 return
             }
+            imagemEstudante.setPadding(0, 0, 0, 0)
             imagemEstudante.scaleType = ImageView.ScaleType.CENTER_CROP
             Picasso.get()
                 .load(estudante.imagem)
@@ -70,6 +71,7 @@ class EstudantesAdapter(
         }
 
         private fun mostrarImagemIndisponivel() {
+            imagemEstudante.setPadding(8, 8, 8, 8)
             imagemEstudante.scaleType = ImageView.ScaleType.CENTER_INSIDE
             imagemEstudante.setImageResource(R.drawable.ic_personagem_indisponivel)
             imagemEstudante.contentDescription =
